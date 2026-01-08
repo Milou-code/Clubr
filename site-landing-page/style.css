@@ -42,6 +42,8 @@ h2 {
     font-size: 2.5em;
     text-align: center;
     font-weight: 800;
+    max-width: 36ch;
+    width: 90%;
 }
 
 #presentation-section p,
@@ -49,7 +51,8 @@ h2 {
     text-align: center;
     color: #a0a0a0;
     margin: 20px auto 30px auto;
-    width: 40%;
+    max-width: 60ch;
+    width: 90%;
 }
 
 .btn-cta {
@@ -57,10 +60,25 @@ h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1em;
     font-weight: 600;
+    text-align: center;
     text-decoration: none;
     background-color: white;
     border-radius: 10px;
     padding: 10px 25px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#presentation-section .btn-cta {
+    padding: 15px 40px;      /* Plus grand : 15px haut/bas, 40px gauche/droite */
+    font-size: 1.3em;        /* Police plus imposante */
+    display: inline-block;   /* Sécurité pour que les marges/paddings s'appliquent bien */
+    margin: 20px 0px;        /* Ajoute un peu d'air par rapport au texte du dessus */
+}
+
+#presentation-section .btn-cta:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05); /* Effet de zoom légèrement plus prononcé que le bouton du header */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); /* Petit halo subtil */
 }
 
 #feature-section {
@@ -134,6 +152,43 @@ h2 {
 .feature-box p {
     color: #a0a0a0;
     line-height: 1.6;
+}
+
+#network-section div {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Aligne verticalement les icônes, textes et croix */
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.customer-icon {
+    display: flex;
+    align-items: center;
+    color: white; /* Couleur des icônes */
+    margin-right: 10px; /* Espace entre l'icône et son texte (Clubs, Artistes...) */
+}
+
+#network-section div p {
+    margin: 0;              /* Supprime les marges qui décalent le texte vers le bas */
+    width: auto;            /* Permet au texte de ne pas prendre toute la largeur */
+    max-width: none;        /* Annule la limite des 60ch pour ces mots précis */
+    color: #ffffff;         /* Même blanc pur que les icônes */
+    font-weight: 700;       /* Rend le texte un peu plus épais pour s'accorder aux icônes */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cross-icon {
+    display: flex;
+    align-items: center;
+    color: #444; /* Croix un peu plus discrètes que les icônes */
+    margin: 0 40px; /* 40px de marge à gauche et à droite de chaque croix */
+}
+
+.cross-icon svg {
+    width: 18px; /* On réduit un peu la taille de la croix par rapport aux icônes */
+    height: 18px;
 }
 
 footer {
@@ -261,4 +316,78 @@ footer {
 #contact-section .btn-submit:hover {
     background-color: #f0f0f0;
     transform: scale(1.02);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+@media (max-width: 900px) {
+    /* Ajustement des titres pour tablettes/mobiles */
+    #presentation-section h1 {
+        font-size: 1.8em;
+        padding: 0 15px;
+    }
+
+    #contact-section form {
+        width: 85%; /* Le formulaire prend plus de place sur petit écran */
+    }
+}
+
+@media (max-width: 600px) {
+    /* 1. On cache le bouton dans le header et on met les éléments en colonne */
+    header .btn-cta {
+        display: none;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    /* 2. Section Présentation */
+    #presentation-section {
+        margin: 30px 0;
+    }
+
+    #presentation-section p {
+        width: 95%; /* On occupe presque toute la largeur */
+        font-size: 1em;
+    }
+
+    #presentation-section .btn-cta {
+        width: 90%; /* Bouton large pour cliquer facilement au pouce */
+        padding: 15px 20px;
+    }
+
+    /* 3. Grille de fonctionnalités : 1 seule colonne */
+    .feature-list {
+        width: 90%;
+        grid-template-columns: 1fr; 
+    }
+
+    /* 4. Formulaire : Pleine largeur */
+    #contact-section form {
+        width: 95%;
+        padding: 20px;
+    }
+
+    #network-section div {
+        display: none; /* On cache toute la section des icônes empilées */
+    }
+
+    /* 5. Footer : On empile les éléments */
+    footer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+        padding: 30px 5%;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: center;
+    }
+
+    .footer-left img {
+        margin: 0 auto;
+    }
 }

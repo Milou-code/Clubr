@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    /* Par défaut (mode clair), le diamant est noir */
+    path { stroke: black; }
+
+    /* Si le navigateur est en mode sombre, il devient blanc */
+    @media (prefers-color-scheme: dark) {
+      path { stroke: white; }
+    }
+  </style>
+  <g fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M25 25 L75 25 L90 45 L50 85 L10 45 Z" />
+    <path d="M25 25 L10 45 L90 45 L75 25 Z" />
+    <path d="M35 45 L50 25 L65 45" />
+    <path d="M10 45 L50 85 L90 45" />
+    <path d="M35 45 L50 85 L65 45" />
+  </g>
+</svg>
