@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <link rel="icon" type="image/png" href="assets/favicon-clubr.png">
+
+    <!-- Liaison avec les feuille(s) de style -->
+    <link href="style.css" rel="stylesheet" >
+
+    <!-- Importation des polices depuis google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="assets/logo-landscape-clubr.svg" alt="Logo Landscape de Clubr">
+        </a>
+        <a href="#contact-section" class="btn-cta">Rejoindre le club</a>
+    </header>
+    <main>
+        <section id="presentation-section">
+            <h1>
+                Un écosytème digital tout en un pour<br>
+                une gestion optimale de votre club
+            </h1>
+            <p>
+                Une plateforme exclusive pour les gérants d'établissements nocturnes.
+                Protéger votre établissement et analyser vos performances.
+                Gérez toutes vos réservations dans un seul espace.
+            </p>
+            <a href="#contact-section" class="btn-cta">Demander un accès prioritaire</a>
+        </section>
+        <section id="feature-section">
+            <h2>Pourquoi rejoindre Clubr ?</h2>
+            <div class="feature-list">
+                <div class="feature-box security">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-icon lucide-shield"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+                    </div>
+                    <h3>Sécurité garantie</h3>
+                    <p>
+                        Système de report et historique de confiance des clients qui vous permet
+                        de protéger votre établissement en empêchant les clients perturbateurs
+                        de se procurer un billet.
+                    </p>
+                </div>
+                <div class="feature-box ticket">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ticket-icon lucide-ticket"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+                    </div>
+                    <h3>Gestion des réservations</h3>
+                    <p>
+                        Centralisez vos réservations et échangez avec vos clients.
+                        Une interface intuitive pour gérer toutes vos tables VIP.
+                    </p>
+                </div>
+                <div class="feature-box data">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined"><path d="M12 16v5"/><path d="M16 14v7"/><path d="M20 10v11"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18v3"/><path d="M8 14v7"/></svg>
+                    </div>
+                    <h3>Analyse des performances</h3>
+                    <p>
+                        Mesurez l'impact réel de chaque soirée et de chaque artiste.
+                        Analytics avancées pour optimiser la fréquentation de vos évènements et votre rentabilité.
+                    </p>
+                </div>               
+            </div>
+        </section>
+        <section id="network-section">
+            <h2>Notre Réseau</h2>
+            <p>
+                Clubr permet de connecter les Clubs, les Clubbers et les artistes entre eux.
+                Nous avons créé un réseau ou chaque acteur bénéficie d'un écosytème pour profiter
+                des meilleurs éxpenriences du monde de la nuit.
+            </p>
+        </section>
+        <section id="contact-section">
+            <form method="POST" action="">
+                <h2>Rejoindre le réseau Clubr</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom">Votre nom</label>
+                        <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Votre prénom</label>
+                        <input type="text" name="prenom" id="prenom" placeholder="Votre prénom"required>
+                    </div>
+                </div>
+
+                <label for="nom-club">Nom du Club</label>
+                <input type="text" name="nom-club" id="nom-club" placeholder="Le nom de votre établissement"required>
+
+                <label for="ville">Ville</label>
+                <input type="text" name="ville" id="ville" placeholder="Paris, Lyon, Marseille..."required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="contact@votreclub.com"required>
+
+                <label for="numero-telephone">Téléphone</label>
+                <input type="tel" name="numero-telephone" id="numero-telephone" placeholder="+33 6 12 34 56 78">
+
+                <input class="btn-submit" type="submit" value="Envoyer ma demande">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <a href="index.html">
+                <img src="assets/logo-landscape-clubr.svg" alt="Logo Landscape de Clubr">
+            </a>
+        </div>
+        <div class="footer-center">
+            <p>© 2026 Clubr - Tous droits réservés.</p>
+        </div>
+        <div class="footer-right">
+            <a href="mailto:contact@clubr.app">contact@clubr.app</a>
+        </div>
+    </footer>
+</body>
+</html>

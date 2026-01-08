@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0; /* Ajoute ceci pour être tranquille */
+    box-sizing: border-box; /* C'EST CETTE LIGNE QUI RÈGLE LE CHEVAUCHEMENT */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: white;
+  font-size: 1.1em;
+  background-color: #000000;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding: 0px 50px
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#presentation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+#presentation-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 800;
+}
+
+#presentation-section p,
+#network-section p {
+    text-align: center;
+    color: #a0a0a0;
+    margin: 20px auto 30px auto;
+    width: 40%;
+}
+
+.btn-cta {
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 25px;
+}
+
+#feature-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 80%;
+    margin-top: 30px;
+}
+
+.feature-box {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.feature-box:hover {
+    background-color: #222222; /* Légèrement plus clair au survol */
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+/* [DEBUT] - Affichage des icônes des feature boxe par gemini */
+
+.feature-icon {
+    /* Taille et centrage de l'icone dans sa boite */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Style visuel */
+    background-color: rgba(255, 255, 255, 0.05); /* Fond très légèrement blanc/transparent */
+    border: 1px solid rgba(255, 255, 255, 0.1);  /* Bordure fine pour définir la forme */
+    border-radius: 12px;                         /* Coins arrondis assortis à la box */
+    
+    /* Couleur de l'icône (SVG) */
+    color: #ffffff; /* Ou utilise la couleur principale de ton logo pour donner du peps */
+    transition: all 0.3s ease;
+}
+
+/* Effet au survol de la box entière */
+.feature-box:hover .feature-icon {
+    background-color: #ffffff; /* L'icône s'illumine au survol */
+    color: #1a1a1a;            /* Le trait devient sombre */
+    transform: translateY(-5px); /* Petit saut vers le haut */
+}
+
+/* [FIN] - Génération de l'affichage des icônes par gemini */
+
+.feature-box h3 {
+    margin: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25em;
+}
+
+.feature-box p {
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes de taille identique */
+    align-items: center;
+    padding: 10px 2%;
+    border-top: 1px solid gray;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-left img {
+    width: 150px; /* Ajuste cette valeur selon tes besoins (ex: 120px, 180px) */
+    height: auto;  /* Garde les proportions intactes */
+}
+
+.footer-right a {
+    color: white; /* Légèrement transparent par défaut */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Transition fluide pour tous les changements */
+}
+
+.footer-right a:hover {
+    color: #ffffff; /* Devient blanc pur */
+    text-shadow: 0 0 1px white; /* Simule un léger engraissement sans bouger le texte */
+    opacity: 1;
+}
+
+#contact-section form {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 60px auto; /* ... px en haut/bas, auto à gauche/droite pour centrer */
+    width: 50%;
+}
+
+#contact-section form:hover {
+    border: 1px solid rgba(255, 255, 255, 0.1);  /* Bordure fine pour définir la forme */
+}
+
+#contact-section form h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#contact-section form label {
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* [DEBUT] - Affichage des champs du formulaire par gemini */
+
+.form-row {
+    display: flex;
+    gap: 20px; /* L'espace entre le nom et le prénom */
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Pour garder le label au-dessus de l'input */
+    flex: 1; /* Force les deux blocs à avoir exactement la même largeur */
+}
+
+/* On s'assure que les inputs à l'intérieur prennent bien toute la place du groupe */
+.form-group input {
+    width: 100%; 
+}
+
+/* Optionnel : Ajustement pour mobile */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column; /* On les empile sur téléphone pour garder la lisibilité */
+        gap: 0;
+    }
+}
+
+#contact-section form input {
+    background-color: #2a2a2a; /* Plus clair que le fond du form pour créer du relief */
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 12px;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 15px; /* Espace constant entre les champs */
+    transition: border-color 0.3s ease;
+}
+
+/* Effet quand l'utilisateur clique dans le champ */
+#contact-section form input:focus {
+    outline: none;
+    border-color: #ffffff; /* Ou la couleur de ton logo */
+    background-color: #333;
+}
+
+/* [FIN] - Affichage des champs du formulaire par gemini */
+
+#contact-section .btn-submit {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#contact-section .btn-submit:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+}
